@@ -27,7 +27,8 @@ class ApplicationController < Sinatra::Base
 
     if user.username == "" || user.password == ""
       redirect '/failure'
-    elsif user
+    else
+      user
       redirect '/login'
     end
     #
